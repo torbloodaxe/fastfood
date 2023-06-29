@@ -15,8 +15,7 @@ import { ComponentsModule } from '../../../components/components.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    ComponentsModule,
-
+    ComponentsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
