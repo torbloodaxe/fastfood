@@ -2,8 +2,6 @@ import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { IonicSlides } from '@ionic/angular';
 
-
-
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',

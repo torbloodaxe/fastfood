@@ -1,0 +1,44 @@
+.veg {
+  align-items: center;
+}
+ion-item{
+  ion-thumbnail{
+    height: 10 vh;
+    width: 20 vw;
+    img{
+      border-radius: 0.2rem;
+      height: 100%;
+      width: 100%
+    }
+  }
+}
+
+ion-row{
+  border: 0.01rem solid var(--ion-color-medium);
+  border-radius: 0.02rem;
+  padding: 0.3rem;
+}
+
+ion-list-header {
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.01rem;
+}
+
+.quantity{
+  width: 2rem;
+}
+
+  ion-text{
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+  }
+  ion-footer{
+    h4,p{
+      margin-left: 3%;
+    }
+    p{
+      font-size: 0.6rem !important;
+    }
+  }
+

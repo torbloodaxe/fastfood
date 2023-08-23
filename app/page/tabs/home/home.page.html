@@ -1,27 +1,29 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title mode="md">
+<ion-header>
+  <ion-toolbar mode="md">
+    <ion-title color="dark">
       <span>Home</span>
-      <ion-icon name="chevron-down-outline"></ion-icon>
+      <ion-icon color="dark" name="chevron-down-outline"></ion-icon>
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <app-banner [slides]="slides"></app-banner>
+  <div *ngIf="isLoading"><ion-skeleton-text animated style="height: 25vh;"></ion-skeleton-text></div>
 
-  <ion-list>
-    <ion-list-header>
+  <app-banner *ngIf="!isLoading" [slides]="slides"></app-banner>
+  <app-loading-restaurant *ngIf="isLoading"></app-loading-restaurant>
+
+  <ion-list *ngIf="!isLoading">
+    <ion-list-header class="ion-margin-bottom">
       <ion-label>
         <h4>Restaurants Nearby</h4>
         <p>Discover unique tastes near you</p>
       </ion-label>
     </ion-list-header>
-    <ion-item-group>
+    <ion-item-group *ngIf="restaurants?.length > 0">
       <app-restaurant
-      *ngFor="let restaurant of restaurants"
-      [restaurant]="restaurant"
-      ></app-restaurant>
+        *ngFor="let restaurant of restaurants"
+        [restaurant]="restaurant"
+        [routerLink]="['/','tabs','restaurants', restaurant.uid]"></app-restaurant>
     </ion-item-group>
   </ion-list>
 </ion-content>
