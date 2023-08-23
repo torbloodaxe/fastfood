@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-restaurant',
   templateUrl: './restaurant.component.html',
@@ -16,6 +17,8 @@ export class RestaurantComponent implements OnInit {
   ngOnInit() {}
 
   getCuisine(cuisine: any[]) {
+    if(cuisine === undefined) return [];
+
     return cuisine.join(', ');
   }
 }

@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -6,8 +6,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
-import { ComponentsModule } from '../../../components/components.module';
-
+import { HomePage } from './home.page';
+import { BannerComponent } from 'src/app/components/banner/banner.component';
 
 @NgModule({
   imports: [
@@ -15,8 +15,6 @@ import { ComponentsModule } from '../../../components/components.module';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    ComponentsModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomePageModule {}
